@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="admin/_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>后台管理</title>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/me.css">
+</head>
+<body>
+<nav th:replace="admin/_fragments :: menu(0)"></nav>
+
+<!--中间-->
+<div class="m-container-small m-padded-tb-large">
+    <div class="ui container">
+        <div class="ui success large message">
+            <h2>Hi.</h2>
+            <p>欢迎登录</p>
+        </div>
+    </div>
+    <img src="https://unsplash.it/1000/600?image=1005" alt="" class="ui rounded bordered fluid image">
+</div>
+<!--底部-->
+<footer th:replace="admin/_fragments :: footer"></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script>
+
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.ui.dropdown').dropdown({
+        on : 'hover'
+    });
+</script>
+
+</body>
+</html>
